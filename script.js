@@ -1,5 +1,4 @@
 // script.js
-
 // ==================== NAVIGATION ==================== 
 const navbar = document.querySelector('.navbar');
 const navToggle = document.getElementById('navToggle');
@@ -165,4 +164,5 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 });
 
 console.log('KRASA Landing Page loaded successfully! 🎨');
+
 
