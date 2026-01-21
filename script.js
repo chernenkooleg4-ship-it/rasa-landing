@@ -1,16 +1,18 @@
 // script.js
 
-// ==================== MOBILE MENU TOGGLE ====================
+// ==================== NAVIGATION ==================== 
+const navbar = document.querySelector('.navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
 
-navToggle.addEventListener('click', () => {
+// Toggle mobile menu
+navToggle?.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
 });
 
 // Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -18,63 +20,57 @@ navLinks.forEach(link => {
     });
 });
 
-// ==================== NAVBAR SCROLL EFFECT ====================
-const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
-
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
+    if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
-    lastScroll = currentScroll;
 });
 
-// ==================== SMOOTH SCROLL ====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-            const offsetTop = target.offsetTop - 80; // 80px offset for navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ==================== SCROLL TO TOP BUTTON ====================
+// ==================== SCROLL TO TOP ==================== 
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
         scrollTopBtn.classList.add('visible');
     } else {
         scrollTopBtn.classList.remove('visible');
     }
 });
 
-scrollTopBtn.addEventListener('click', () => {
+scrollTopBtn?.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
 
-// ==================== CONTACT FORM ====================
+// ==================== SMOOTH SCROLL ==================== 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+// ==================== CONTACT FORM ==================== 
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', async (e) => {
+contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Get form data
     const formData = {
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
@@ -83,49 +79,17 @@ contactForm.addEventListener('submit', async (e) => {
         message: document.getElementById('message').value
     };
     
-    // Показываем, что форма отправляется
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Отправка...';
-    submitBtn.disabled = true;
+    // Here you would typically send the data to your backend
+    console.log('Form data:', formData);
     
-    // Здесь должна быть отправка на сервер
-    // Для демо просто показываем успешное сообщение
-    setTimeout(() => {
-        alert('✅ Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение 24 часов.');
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 1000);
+    // Show success message
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
     
-    // Реальная отправка (раскомментируйте, когда будет бэкенд):
-    /*
-    try {
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        });
-        
-        if (response.ok) {
-            alert('✅ Спасибо! Ваша заявка отправлена.');
-            contactForm.reset();
-        } else {
-            alert('❌ Произошла ошибка. Попробуйте позже.');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('❌ Произошла ошибка. Попробуйте позже.');
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-    */
+    // Reset form
+    contactForm.reset();
 });
 
-// ==================== ANIMATIONS ON SCROLL ====================
+// ==================== INTERSECTION OBSERVER (Animations) ==================== 
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -140,64 +104,30 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all feature cards and salon features
-document.querySelectorAll('.feature-card, .salon-feature, .pricing-row').forEach(el => {
+// Observe all feature cards, pricing cards, etc.
+document.querySelectorAll('.feature-card, .salon-feature, .phone-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// ==================== COUNTER ANIMATION FOR STATS ====================
-const animateCounter = (element, target, duration = 2000) => {
-    const start = 0;
-    const increment = target / (duration / 16); // 60 FPS
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target.toLocaleString('ru-RU');
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current).toLocaleString('ru-RU');
-        }
-    }, 16);
-};
-
-// Animate stats when they come into view
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-            entry.target.classList.add('animated');
-            const target = entry.target.textContent.replace(/[^\d]/g, '');
-            const suffix = entry.target.textContent.replace(/[\d\s]/g, '');
-            
-            if (target) {
-                animateCounter(entry.target, parseInt(target));
-                // Add suffix back after animation
-                setTimeout(() => {
-                    entry.target.textContent = parseInt(target).toLocaleString('ru-RU') + suffix;
-                }, 2100);
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat-number').forEach(stat => {
-    statsObserver.observe(stat);
+// ==================== LOADER (Optional) ==================== 
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
 });
 
-// ==================== PHONE INPUT MASK ====================
+// ==================== PHONE NUMBER FORMATTING ==================== 
 const phoneInput = document.getElementById('phone');
 
-phoneInput.addEventListener('input', (e) => {
+phoneInput?.addEventListener('input', (e) => {
     let value = e.target.value.replace(/\D/g, '');
     
     if (value.length > 0) {
-        if (value[0] === '7' || value[0] === '8') {
-            value = '7' + value.substring(1);
-        } else {
+        if (value[0] === '8') {
+            value = '7' + value.slice(1);
+        }
+        if (value[0] !== '7') {
             value = '7' + value;
         }
     }
@@ -219,47 +149,20 @@ phoneInput.addEventListener('input', (e) => {
     e.target.value = formatted;
 });
 
-// ==================== PREVENT HORIZONTAL SCROLL ====================
-let touchStartX = 0;
-let touchEndX = 0;
-
-document.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
+// ==================== APP BADGE CLICKS ==================== 
+document.querySelectorAll('.app-badge').forEach(badge => {
+    badge.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Приложение скоро будет доступно в App Store и Google Play!');
+    });
 });
 
-document.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
+// ==================== PREVENT DEFAULT ON PLACEHOLDER LINKS ==================== 
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
 });
 
-// ==================== PRELOAD IMAGES ====================
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
+console.log('KRASA Landing Page loaded successfully! 🎨');
 
-// ==================== EASTER EGG - CLICK LOGO 5 TIMES ====================
-let clickCount = 0;
-const logo = document.querySelector('.logo');
-
-logo.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount === 5) {
-        logo.style.animation = 'spin 0.5s ease';
-        setTimeout(() => {
-            logo.style.animation = '';
-            clickCount = 0;
-        }, 500);
-    }
-});
-
-// Add spin animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-`;
-document.head.appendChild(style);
-
-console.log('🎨 KRASA Landing Page loaded successfully!');
-console.log('💅 Made with love for beauty industry');
