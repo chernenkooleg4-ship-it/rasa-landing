@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRASA - Онлайн-запись в салоны красоты</title>
+    <meta name="description" content="KRASA - современное приложение для онлайн-записи в салоны красоты, барбершопы, СПА и косметологию. Бронируйте услуги в 1 клик!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">💅</span>
+                    <span class="logo-text">KRASA</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">Главная</a></li>
+                    <li><a href="#features" class="nav-link">Возможности</a></li>
+                    <li><a href="#for-salons" class="nav-link">Для салонов</a></li>
+                    <li><a href="#pricing" class="nav-link">Тарифы</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Красота в <span class="gradient-text">один клик</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Найди лучший салон, запишись онлайн и оплати услугу через приложение. 
+                    Никаких звонков и ожиданий!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                            <path d="M15.5 0H4.5C3.4 0 2.5 0.9 2.5 2V22C2.5 23.1 3.4 24 4.5 24H15.5C16.6 24 17.5 23.1 17.5 22V2C17.5 0.9 16.6 0 15.5 0ZM10 23C9.17 23 8.5 22.33 8.5 21.5C8.5 20.67 9.17 20 10 20C10.83 20 11.5 20.67 11.5 21.5C11.5 22.33 10.83 23 10 23ZM15.5 19H4.5V3H15.5V19Z" fill="currentColor"/>
+                        </svg>
+                        Скачать приложение
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        Узнать больше
+                    </a>
+                </div>
+                <div class="app-badges">
+                    <a href="#" class="app-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                    </a>
+                    <a href="#" class="app-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="screen-content">
+                            <div class="app-preview">
+                                <h3>💅 KRASA</h3>
+                                <p>Найди свой салон</p>
+                                <div class="preview-cards">
+                                    <div class="preview-card">🏪 Салоны рядом</div>
+                                    <div class="preview-card">⭐ Топ мастера</div>
+                                    <div class="preview-card">💰 Лучшие цены</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Возможности</span>
+                <h2 class="section-title">Всё для твоей красоты</h2>
+                <p class="section-subtitle">Удобное приложение для записи в салоны красоты, барбершопы, СПА и косметологию</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Поиск салонов</h3>
+                    <p>Найди ближайшие салоны на карте с рейтингами и отзывами реальных клиентов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Онлайн-запись</h3>
+                    <p>Бронируй удобное время без звонков и ожидания. Видишь свободные слоты в реальном времени</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Оплата онлайн</h3>
+                    <p>Оплачивай услуги прямо в приложении картой, Apple Pay или Google Pay</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Напоминания</h3>
+                    <p>Получай уведомления о предстоящей записи, чтобы ничего не забыть</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Отзывы и рейтинги</h3>
+                    <p>Читай отзывы других клиентов и выбирай лучших мастеров</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Бонусы и скидки</h3>
+                    <p>Копи бонусы за визиты и получай персональные скидки от салонов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Салонов в приложении</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Успешных записей</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label">Рейтинг в App Store</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Salons Section -->
+    <section id="for-salons" class="for-salons">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Для бизнеса</span>
+                <h2 class="section-title">Присоединяйтесь к KRASA</h2>
+                <p class="section-subtitle">Привлекайте новых клиентов и автоматизируйте запись</p>
+            </div>
+            <div class="salons-content">
+                <div class="salons-features">
+                    <div class="salon-feature">
+                        <div class="salon-feature-icon">📊</div>
+                        <div class="salon-feature-content">
+                            <h3>Умная аналитика</h3>
+                            <p>Отслеживайте статистику записей, доход и популярные услуги в реальном времени</p>
+                        </div>
+                    </div>
+                    <div class="salon-feature">
+                        <div class="salon-feature-icon">👥</div>
+                        <div class="salon-feature-content">
+                            <h3>База клиентов</h3>
+                            <p>Автоматическая CRM-система с историей посещений и предпочтениями клиентов</p>
+                        </div>
+                    </div>
+                    <div class="salon-feature">
+                        <div class="salon-feature-icon">🔗</div>
+                        <div class="salon-feature-content">
+                            <h3>Интеграция с YClients</h3>
+                            <p>Синхронизация с вашей существующей системой записи</p>
+                        </div>
+                    </div>
+                    <div class="salon-feature">
+                        <div class="salon-feature-icon">💰</div>
+                        <div class="salon-feature-content">
+                            <h3>Выгодные условия</h3>
+                            <p>Первый месяц бесплатно, затем всего 12% комиссии с каждой записи</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="salons-cta">
+                    <div class="cta-card">
+                        <h3>🎁 Специальное предложение</h3>
+                        <div class="cta-offer">
+                            <div class="offer-item">
+                                <span class="offer-month">Месяц 1</span>
+                                <span class="offer-value">0% комиссия</span>
+                            </div>
+                            <div class="offer-item">
+                                <span class="offer-month">Месяц 2</span>
+                                <span class="offer-value">6% комиссия</span>
+                            </div>
+                            <div class="offer-item">
+                                <span class="offer-month">Месяц 3+</span>
+                                <span class="offer-value">12% комиссия</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-block">Стать партнёром</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Тарифы</span>
+                <h2 class="section-title">Прозрачные условия</h2>
+                <p class="section-subtitle">Выбирайте оптимальный вариант для вашего бизнеса</p>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-header-row">
+                    <div class="pricing-cell">Выручка/месяц</div>
+                    <div class="pricing-cell">Комиссия</div>
+                    <div class="pricing-cell">Пример</div>
+                    <div class="pricing-cell">Вы получаете</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-cell">0 - 50 000 ₽</div>
+                    <div class="pricing-cell highlight">12%</div>
+                    <div class="pricing-cell">50 000 × 12%</div>
+                    <div class="pricing-cell">44 000 ₽</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-cell">50 001 - 100 000 ₽</div>
+                    <div class="pricing-cell highlight">10%</div>
+                    <div class="pricing-cell">100 000 × 10%</div>
+                    <div class="pricing-cell">90 000 ₽</div>
+                </div>
+                <div class="pricing-row featured">
+                    <div class="pricing-cell">100 001 - 200 000 ₽</div>
+                    <div class="pricing-cell highlight">8%</div>
+                    <div class="pricing-cell">200 000 × 8%</div>
+                    <div class="pricing-cell">184 000 ₽</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-cell">200 001 - 500 000 ₽</div>
+                    <div class="pricing-cell highlight">6%</div>
+                    <div class="pricing-cell">500 000 × 6%</div>
+                    <div class="pricing-cell">470 000 ₽</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-cell">500 001 - 1 000 000 ₽</div>
+                    <div class="pricing-cell highlight">4%</div>
+                    <div class="pricing-cell">1 000 000 × 4%</div>
+                    <div class="pricing-cell">960 000 ₽</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-cell">Свыше 1 000 000 ₽</div>
+                    <div class="pricing-cell highlight">2%</div>
+                    <div class="pricing-cell">2 000 000 × 2%</div>
+                    <div class="pricing-cell">1 960 000 ₽</div>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>💡 Чем больше выручка — тем меньше комиссия! Выплаты каждый понедельник.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Контакты</span>
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <p class="section-subtitle">Мы всегда на связи и готовы ответить на ваши вопросы</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:support@krasa.app">support@krasa.app</a>
+                            <a href="mailto:partners@krasa.app">partners@krasa.app</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Телефон</h4>
+                            <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                            <p class="contact-note">Пн-Вс 09:00-21:00 (МСК)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>Мессенджеры</h4>
+                            <div class="social-links">
+                                <a href="https://t.me/krasa_support" class="social-link telegram" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-3.146 6.396-3.146 6.396s-.315.773-.87.773c-.287 0-.574-.143-.861-.43l-2.296-1.988-1.148-.86-.717-.574c-.431-.287-.574-.717-.287-1.148.143-.215.43-.43.717-.574 2.009-1.005 6.396-3.146 6.396-3.146s.43-.143.717-.143c.287 0 .574.143.717.43.143.287.143.574.143.861-.072.287-.215.717-.365 1.403z"/>
+                                    </svg>
+                                    Telegram
+                                </a>
+                                <a href="https://wa.me/79999999999" class="social-link whatsapp" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Адрес</h4>
+                            <p>119991, г. Москва, Российская Федерация</p>
+                            <p class="contact-note">ИП Черненко Олег Олегович</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Оставьте заявку</h3>
+                        <p>Мы свяжемся с вами в течение 24 часов</p>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="">Выберите тему</option>
+                                <option value="partner">Хочу стать партнёром</option>
+                                <option value="support">Техническая поддержка</option>
+                                <option value="question">Общий вопрос</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💅</span>
+                        <span class="logo-text">KRASA</span>
+                    </div>
+                    <p>Онлайн-запись в салоны красоты в один клик</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/krasa_app" target="_blank" class="footer-social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-3.146 6.396-3.146 6.396s-.315.773-.87.773c-.287 0-.574-.143-.861-.43l-2.296-1.988-1.148-.86-.717-.574c-.431-.287-.574-.717-.287-1.148.143-.215.43-.43.717-.574 2.009-1.005 6.396-3.146 6.396-3.146s.43-.143.717-.143c.287 0 .574.143.717.43.143.287.143.574.143.861-.072.287-.215.717-.365 1.403z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/79999999999" target="_blank" class="footer-social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Клиентам</h4>
+                    <ul>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#">Скачать приложение</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Партнёрам</h4>
+                    <ul>
+                        <li><a href="#for-salons">Для салонов</a></li>
+                        <li><a href="#pricing">Тарифы</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#contact">Стать партнёром</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Юридическая информация</h4>
+                    <ul>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Публичная оферта</a></li>
+                        <li><a href="#">Политика возврата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ИП Черненко Олег Олегович. Все права защищены.</p>
+                <p>ОГРНИП: XXXXXXXXXXXXX | ИНН: XXXXXXXXXXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
